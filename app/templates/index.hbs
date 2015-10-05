@@ -1,0 +1,14 @@
+<h1>Welcome to Quanda!</h1>
+
+<h3>We have a great community of people who want to help others.  Have a question to ask?  Know the answer to someone's else query?  Come join us and be a part of a helpful community.</h3>
+
+<p> Browse questions below:</p>
+
+
+<ul>
+  {{#each model as |question|}}
+{{question-tile question=question}}
+  {{/each}}
+</ul>
+
+{{new-question save="save"}}
