@@ -6,3 +6,11 @@
     <p>{{question.notes}}</p>
   </div>
 </div>
+
+<h3>Answers</h3>
+<ul>
+  {{#each question.answers as |answer|}}
+  {{/each}}
+</ul>
+
+{{new-answer saveAnswer="saveAnswer" question=question}}

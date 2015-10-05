@@ -15,7 +15,7 @@ export default Ember.Route.extend({
       rental.save();
       this.transitionTo('question', question_id);
     },
-    
+
     delete(question) {
       if (confirm('This will completely erase this question and all its answers.  Are you sure you want to delete it?')) {
         this.send('destroyQuestion', question);
@@ -25,6 +25,11 @@ export default Ember.Route.extend({
     destroyQuestion(question) {
       question.destroyRecord();
       this.transitionTo('index');
+    },
+
+    saveAnswer(params) {
+      var newAnswer = this.store.createRecord('answer', params);
+      newAnswer.save();
     }
   }
 });
