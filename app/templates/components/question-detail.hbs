@@ -9,7 +9,9 @@
 
 <h3>Answers</h3>
 <ul>
-  {{#each question.answers as |answer|}}
+  {{#each model.answers as |answer|}}
+  <li>Name:{{answer.name}}</li>
+  <li>Explanation:{{answer.explanation}}</li>
   {{/each}}
 </ul>
 
