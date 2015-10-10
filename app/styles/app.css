@@ -1,6 +1,11 @@
 .page-header {
   font-style: oblique;
   font-family: "Arial Black", Gadget, sans-serif;
+  padding-left: 30px;
+}
+
+.navbar-brand {
+  padding-left: 30px;
 }
 
 .panel-body {

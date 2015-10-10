@@ -14,7 +14,8 @@
   <li><p class="well well-lg">
     {{answer.explanation}}
     <br>
-    <br> By:  {{answer.name}}
+    <br> By:  {{answer.name}}<br>
+    Submitted on {{format-date answer.date_added}}
   </p></li>
 
   {{/each}}
