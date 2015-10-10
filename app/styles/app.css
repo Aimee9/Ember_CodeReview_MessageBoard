@@ -6,3 +6,16 @@
 .panel-body {
   background-color: lightgrey;
 }
+
+ul {
+  list-style-type: none;
+}
+
+html body{
+  background: linear-gradient(90deg, #FFF, #E0CCF5);
+  min-height: 100%;
+}
+
+.container {
+  height: 100%;
+}
