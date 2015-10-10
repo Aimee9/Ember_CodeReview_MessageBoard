@@ -12,7 +12,7 @@ export default Ember.Route.extend({
           question.set(key, params[key]);
         }
       });
-      rental.save();
+      question.save();
       this.transitionTo('question', question_id);
     },
 
@@ -29,12 +29,7 @@ export default Ember.Route.extend({
 
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
-      var question = params.question;
-      question.get('answers').addObject(newAnswer);
-      newAnswer.save().then(function(){
-        return question.save();
-      })
-      this.transitionTo('question', params.question);
+      newAnswer.save();
     }
   }
 });
