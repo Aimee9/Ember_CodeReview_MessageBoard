@@ -10,9 +10,13 @@
 <h3>Answers</h3>
 <ul>
   {{#each question.answers as |answer|}}
-  <li>Name: {{answer.name}}</li>
-  <li>Answer:  {{answer.explanation}}</li>
+  <li>by: {{answer.name}}</li>
+  <li><p class="well well-lg">
+    {{answer.explanation}}
+  </p></li>
   {{/each}}
 </ul>
 <br>
 {{new-answer saveAnswer="saveAnswer" question=question}}
+
+<h2>Answers</h2>
